@@ -1,1 +1,55 @@
-/* You can add global styles to this file, and also import other style files */
+/* ── Variables de tema ─────────────────────────────── */
+:root {
+  --accent:        #2563eb;
+  --accent-hover:  #1d4ed8;
+  --accent-light:  #eff6ff;
+  --sidebar-w:     240px;
+  --sidebar-bg:    #ffffff;
+  --sidebar-border:#e2e8f0;
+  --content-bg:    #f1f5f9;
+  --card-bg:       #ffffff;
+  --card-border:   #e2e8f0;
+  --text-primary:  #0f172a;
+  --text-secondary:#64748b;
+  --text-muted:    #94a3b8;
+  --shadow-sm:     0 1px 4px rgba(0,0,0,0.07);
+  --shadow-md:     0 4px 20px rgba(0,0,0,0.09);
+  --radius:        14px;
+  --transition:    0.2s ease;
+}
+
+/* Modo oscuro */
+body.dark {
+  --sidebar-bg:    #1e293b;
+  --sidebar-border:#334155;
+  --content-bg:    #0f172a;
+  --card-bg:       #1e293b;
+  --card-border:   #334155;
+  --text-primary:  #f1f5f9;
+  --text-secondary:#94a3b8;
+  --text-muted:    #64748b;
+  --accent-light:  #1e3a5f;
+}
+
+/* ── Reset ─────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--content-bg);
+  color: var(--text-primary);
+  transition: background var(--transition), color var(--transition);
+}
+
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--card-border); border-radius: 4px; }

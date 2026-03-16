@@ -1,0 +1,16 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  margin-left: var(--sidebar-w);
+  flex: 1;
+  min-height: 100vh;
+  background: var(--content-bg);
+  transition: margin-left 0.3s ease, background var(--transition);
+}
+
+@media (max-width: 768px) {
+  .main-content { margin-left: 68px; }
+}

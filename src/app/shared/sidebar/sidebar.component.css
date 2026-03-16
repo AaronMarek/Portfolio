@@ -1,0 +1,129 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: var(--sidebar-w);
+  background: var(--sidebar-bg);
+  border-right: 1px solid var(--sidebar-border);
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 0.875rem;
+  z-index: 200;
+  overflow: hidden;
+  transition: width 0.3s ease, background var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.sidebar.collapsed { width: 68px; }
+
+/* ── Logo ─────────────────────── */
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.25rem 0.375rem 1.5rem;
+  border-bottom: 1px solid var(--sidebar-border);
+  margin-bottom: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.logo-circle {
+  min-width: 42px;
+  height: 42px;
+  background: var(--accent);
+  color: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+.logo-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  transition: opacity 0.2s, width 0.3s;
+  white-space: nowrap;
+}
+
+.collapsed .logo-name {
+  opacity: 0;
+  pointer-events: none;
+  width: 0;
+}
+
+/* ── Nav items ────────────────── */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  flex: 1;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.7rem 0.75rem;
+  border-radius: 10px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  text-align: left;
+}
+
+.nav-item svg {
+  min-width: 20px;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.nav-item span { transition: opacity 0.2s; }
+
+.collapsed .nav-item span {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  background: var(--accent-light);
+  color: var(--accent);
+}
+
+/* ── Botón colapsar ──────────── */
+.collapse-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  margin-top: auto;
+  border-radius: 8px;
+  color: var(--text-muted);
+  border: 1px solid var(--card-border);
+  background: var(--content-bg);
+  transition: all 0.15s;
+}
+
+.collapse-btn svg { width: 15px; height: 15px; }
+.collapse-btn:hover { color: var(--accent); border-color: var(--accent); }
+
+/* ── Responsive ───────────────── */
+@media (max-width: 768px) {
+  .sidebar { width: 68px; }
+  .logo-name, .nav-item span { opacity: 0; pointer-events: none; }
+  .collapse-btn { display: none; }
+}
