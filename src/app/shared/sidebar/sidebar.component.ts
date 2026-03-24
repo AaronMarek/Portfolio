@@ -13,12 +13,11 @@ export class SidebarComponent {
   themeService = inject(ThemeService);
   isCollapsed = false;
 
-  // ⚠️ Personalizá estas variables con tus datos
   initials   = 'AM';
-  fullName   = 'Aaron Marek Demczyszak Rojas';
+  fullName   = 'Aaron Marek';
   githubUrl  = 'https://github.com/AaronMarek';
   linkedinUrl = 'https://www.linkedin.com/in/aaron-marek-rojas/';
-  cvUrl      = '/assets/CV.pdf';
+  cvUrl      = '/CV.pdf';
 
   toggleCollapse() {
     this.isCollapsed = !this.isCollapsed;

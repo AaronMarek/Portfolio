@@ -45,7 +45,7 @@
             <polyline points="7 10 12 15 17 10"/>
             <line x1="12" y1="15" x2="12" y2="3"/>
           </svg>
-          Download CV
+          Descargar CV
         </a>
         <div class="icon-links">
           <a [href]="linkedinUrl" target="_blank" class="icon-link" title="LinkedIn">
@@ -75,20 +75,20 @@
           <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
           <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
         </svg>
-        Projects
+        Proyectos
       </button>
       <button class="tab" [class.active]="activeTab()==='Habilidades'"   (click)="setTab('Habilidades')">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15">
           <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
         </svg>
-        Skills
+        Habilidades
       </button>
       <button class="tab" [class.active]="activeTab()==='Contacto'"  (click)="setTab('Contacto')">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15">
           <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
           <polyline points="22,6 12,13 2,6"/>
         </svg>
-        Contact
+        Contacto
       </button>
     </nav>
   </div>
@@ -138,7 +138,7 @@
     @if (activeTab() === 'Proyectos') {
       <div class="section fade-in">
         <div class="section-label">
-          <span class="section-sub">My Work</span>
+          <span class="section-sub">Mi trabajo</span>
           <h2>Portfolio</h2>
         </div>
 
@@ -182,7 +182,7 @@
     @if (activeTab() === 'Habilidades') {
       <div class="section fade-in">
         <div class="section-label">
-          <span class="section-sub">My Abilities</span>
+          <span class="section-sub">Mis habilidades</span>
           <h2>Skills</h2>
         </div>
         <div class="skills-grid">
@@ -230,8 +230,8 @@
     @if (activeTab() === 'Contacto') {
       <div class="section fade-in">
         <div class="section-label">
-          <span class="section-sub">Get in Touch</span>
-          <h2>Contact Me</h2>
+          <span class="section-sub">Ponte en contacto!</span>
+          <h2>Contáctame</h2>
         </div>
         <div class="contact-grid">
           <a [href]="'mailto:' + email" class="card contact-card">
