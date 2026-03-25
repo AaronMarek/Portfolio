@@ -1,4 +1,4 @@
-<aside class="sidebar" [class.collapsed]="isCollapsed">
+<aside class="sidebar" [class.collapsed]="layoutService.isCollapsed()">
 
   <!-- Logo / Iniciales -->
   <div class="sidebar-logo">
@@ -42,7 +42,7 @@
         <polyline points="7 10 12 15 17 10"/>
         <line x1="12" y1="15" x2="12" y2="3"/>
       </svg>
-      <span>Download CV</span>
+      <span>Descargar CV</span>
     </a>
 
     <!-- Toggle de tema -->
@@ -60,21 +60,21 @@
           <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
           <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
         </svg>
-        <span>Light Mode</span>
+        <span>Modo Claro</span>
       } @else {
         <!-- Luna -->
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
         </svg>
-        <span>Dark Mode</span>
+        <span>Modo Oscuro</span>
       }
     </button>
 
   </nav>
 
   <!-- Botón colapsar sidebar -->
-  <button class="collapse-btn" (click)="toggleCollapse()" title="Colapsar menú">
-    @if (isCollapsed) {
+  <button class="collapse-btn" (click)="layoutService.toggle()" title="Colapsar menú">
+    @if (layoutService.isCollapsed()) {
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
         <polyline points="9 18 15 12 9 6"/>
       </svg>

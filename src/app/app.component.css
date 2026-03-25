@@ -11,6 +11,10 @@
   transition: margin-left 0.3s ease, background var(--transition);
 }
 
+.main-content.expanded {
+  margin-left: 68px;
+}
+
 @media (max-width: 768px) {
   .main-content { margin-left: 68px; }
 }
